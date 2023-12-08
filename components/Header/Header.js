@@ -17,11 +17,11 @@ export class Header extends DivComponent {
       <nav class="nav">
         <a class="nav__item" href="">
           <img src="../../public/img/search.svg" alt="Іконка пошуку">
-          <span>Пошук книги</span>
+          Пошук книги
         </a>
         <a class="nav__item" href="">
           <img src="../../public/img/favourites.svg" alt="Іконка додавання до обранного">
-          <span>Обране: ${this.appState.favourites.length}</span>
+          Обране <span class="nav__item_counter">${this.appState.favourites.length}</span>
         </a>
       </nav>
     `;

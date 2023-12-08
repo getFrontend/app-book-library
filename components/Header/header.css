@@ -1,0 +1,23 @@
+.header {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo__img {
+  width: 80px;
+  height: 80px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

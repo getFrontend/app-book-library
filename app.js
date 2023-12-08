@@ -1,4 +1,5 @@
 import 'normalize.css';
+import './reset.css';
 import './style.css';
 import { MainView } from './views/main/main';
 

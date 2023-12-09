@@ -15,7 +15,14 @@ export class MainView extends AbstractView {
     super();
     this.appState = appState;
     this.appState = onChange(this.appState, this.useAppState.bind(this));
+    this.state = onChange(this.state, this.useState.bind(this));
     this.setTitle('Пошук книг');
+  }
+
+  useState(path) {
+    if (path === 'searchQuery') {
+      console.log(path);
+    }
   }
 
   useAppState(path) {

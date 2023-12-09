@@ -3,6 +3,8 @@ import { AbstractView } from "../../common/view";
 import { Header } from "../../components/Header/Header";
 import { Search } from "../../components/Search/Search";
 
+const URL = 'https://openlibrary.org/search.json';
+
 export class MainView extends AbstractView {
   state = {
     list: [],
@@ -19,9 +21,17 @@ export class MainView extends AbstractView {
     this.setTitle('Пошук книг');
   }
 
-  useState(path) {
+  async loadList(q, offset) {
+    const res = await fetch(`${URL}?q=${q}&offset=${offset}`);
+    return res.json();
+  }
+
+  async useState(path) {
     if (path === 'searchQuery') {
-      console.log(path);
+      this.state.loading = true;
+      const data = await this.loadList(this.state.searchQuer, this.state.offset);
+      this.state.loading = false;
+      this.state.list = data.docs;
     }
   }
 

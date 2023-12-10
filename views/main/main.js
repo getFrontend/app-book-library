@@ -45,7 +45,7 @@ export class MainView extends AbstractView {
 
   useAppState(path) {
     if (path === 'favourites') {
-      console.log(path);
+      this.render();
     }
   }
 

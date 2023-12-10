@@ -10,6 +10,16 @@ export class Card extends DivComponent {
     this.cardState = cardState;
   }
 
+  #addToFavourites() {
+    this.appState.favourites.push(this.cardState);
+  }
+
+  #deleteFormFavourites() {
+    this.appState.favourites = this.appState.favourites.filter(
+      i => i.key !== this.cardState.key
+    )
+  }
+
   render() {
     this.element.classList.add('card');
     const existInFavourites = this.appState.favourites.find(i => i.key === this.cardState.key);
@@ -36,6 +46,12 @@ export class Card extends DivComponent {
         </button>
       </div>
     `;
+
+    if (existInFavourites) {
+      this.element.querySelector('.card__btn').addEventListener('click', this.#deleteFormFavourites.bind(this));
+    } else {
+      this.element.querySelector('.card__btn').addEventListener('click', this.#addToFavourites.bind(this));
+    }
 
     return this.element;
   }

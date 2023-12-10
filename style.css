@@ -1,3 +1,8 @@
+:root {
+  --c-primary: #D7F4F8;
+  --c-secondary: #1ABC9C;
+}
+
 #app {
   margin: 0 auto;
   padding: 15px 30px;

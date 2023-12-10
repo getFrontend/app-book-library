@@ -14,7 +14,7 @@
 .search__input {
   flex-grow: 1;
   padding: 15px 30px 15px 50px;
-  background-color: #caeefa;
+  background-color: var(--c-primary);
   border: none;
   border-radius: 5px;
 }
@@ -34,7 +34,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #48c09c;
+  background-color: var(--c-secondary);
   border: none;
   border-radius: 5px;
   cursor: pointer;

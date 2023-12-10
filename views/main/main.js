@@ -2,6 +2,7 @@ import onChange from "on-change";
 import { AbstractView } from "../../common/view";
 import { Header } from "../../components/Header/Header";
 import { Search } from "../../components/Search/Search";
+import { CardList } from "../../components/CardList/CardList";
 
 const URL = 'https://openlibrary.org/search.json';
 
@@ -29,9 +30,13 @@ export class MainView extends AbstractView {
   async useState(path) {
     if (path === 'searchQuery') {
       this.state.loading = true;
-      const data = await this.loadList(this.state.searchQuer, this.state.offset);
+      const data = await this.loadList(this.state.searchQuery, this.state.offset);
       this.state.loading = false;
       this.state.list = data.docs;
+    }
+
+    if (path === 'list' || path === 'loading') {
+      this.render();
     }
   }
 
@@ -43,12 +48,11 @@ export class MainView extends AbstractView {
 
   render() {
     const main = document.createElement('div');
-    // main.innerHTML = `Кількість знайденних книг: ${this.appState.favourites.length}`;
     main.append(new Search(this.state).render());
+    main.append(new CardList(this.appState, this.state).render());
     this.app.innerHTML = '';
     this.app.append(main);
     this.renderHeader();
-    // this.appState.favourites.push('a');
   }
 
   renderHeader() {

@@ -51,43 +51,14 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.card__btn:hover,
+.card__btn:active {
+  opacity: 0.9;
 }
 
 .card__btn_add {
   background-color: #fafafa;
 }
-
-  /* &__image {
-  }
-
-  &__info {
-  }
-
-  &__tag {
-  }
-
-  &__name {
-  }
-
-  &__author {
-  }
-
-  &__btn {
-  }
-}
-.${existInFavourites {
-}
-.? {
-}
-.'card {
-
-  &__btn {
-
-    &_add' {
-    }
-  }
-}
-.: {
-}
-.''} {
-} */

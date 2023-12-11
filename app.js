@@ -2,12 +2,17 @@ import 'normalize.css';
 import './reset.css';
 import './style.css';
 import { MainView } from './views/main/main';
+import { FavouritesView } from './views/favourites/favourites';
 
 class App {
   routes = [
     {
       path: "",
       view: MainView
+    },
+    {
+      path: "#favourites",
+      view: FavouritesView
     }
   ];
 

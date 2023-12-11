@@ -8,6 +8,7 @@
 .card__image {
   padding-top: 10px;
   min-height: 140px;
+  max-height: 276px;
   display: flex;
   align-items: start;
   justify-content: center;

@@ -40,8 +40,8 @@ export class Card extends DivComponent {
         </div>
         <button class="card__btn ${existInFavourites ? 'card__btn_add' : ''}">
           ${existInFavourites
-        ? '<img src="../../public/img/favourites.svg" alt="Книжку вже додано в обране">'
-        : '<img src="../../public/img/favourites-white.svg" alt="Додати в обране">'
+        ? '<img src="/img/favourites.svg" alt="Книжку вже додано в обране">'
+        : '<img src="/img/favourites-white.svg" alt="Додати в обране">'
       }
         </button>
       </div>

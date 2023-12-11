@@ -23,6 +23,11 @@ export class MainView extends AbstractView {
     this.setTitle('Пошук книг');
   }
 
+  destroy() {
+    onChange.unsubscribe(this.appState);
+    onChange.unsubscribe(this.state);
+  }
+
   async loadList(q, offset) {
     const res = await fetch(`${URL}?q=${q}&offset=${offset}`);
     return res.json();

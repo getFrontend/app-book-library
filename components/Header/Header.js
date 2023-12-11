@@ -12,12 +12,12 @@ export class Header extends DivComponent {
     this.element.innerHTML = `
       <div class="logo">
         <a className="logo__link" href="/">
-          <img class="logo__img" src="/public/img/logo.svg" alt="Логотип сайту">
+          <img class="logo__img" src="./img/logo.svg" alt="Логотип сайту">
         </a>
       </div>
       <nav class="nav">
         <a class="nav__item" href="/">
-          <img src="/mg/search.svg" alt="Іконка пошуку">
+          <img src="/img/search.svg" alt="Іконка пошуку">
           Пошук книги
         </a>
         <a class="nav__item" href="#favourites">

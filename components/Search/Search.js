@@ -16,7 +16,7 @@ export class Search extends DivComponent {
     this.element.classList.add('search');
     this.element.innerHTML = `
       <div class="search__wrapper">
-        <input class="search__input" type="text" placeholder="Знайти книгу або автора" value="${this.state.searchQuery ?
+        <input class="search__input" type="text" placeholder="Введіть назву книги або автора" value="${this.state.searchQuery ?
         this.state.searchQuery : ''}">
         <img class="search__icon" src="../../public/img/search.svg" alt="Іконка пошуку">
       </div>

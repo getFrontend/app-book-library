@@ -58,7 +58,7 @@ export class MainView extends AbstractView {
     const main = document.createElement('div');
     const title = document.createElement('h1');
     title.innerHTML = `
-      <h1>Знайдено книг: ${this.state.numFound}</h1>
+      <h1>Знайдено книг або публікацій: ${this.state.numFound}</h1>
     `;
 
     main.append(new Search(this.state).render());

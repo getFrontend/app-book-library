@@ -16,7 +16,7 @@ export class Header extends DivComponent {
         </a>
       </div>
       <nav class="nav">
-        <a class="nav__item" href="#search">
+        <a class="nav__item" href="/">
           <img src="../../public/img/search.svg" alt="Іконка пошуку">
           Пошук книги
         </a>

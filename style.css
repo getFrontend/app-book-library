@@ -3,11 +3,19 @@
   --c-secondary: #1ABC9C;
 }
 
+body {
+  min-height:100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 #app {
+  flex: 1;
   margin: 0 auto;
   padding: 15px 30px;
   max-width: 1440px;
   min-width: 320px;
+  min-height: 250px;
 }
 
 @media (max-width: 390px) {

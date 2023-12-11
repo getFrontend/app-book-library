@@ -23,9 +23,23 @@ export class FavouritesView extends AbstractView {
 
   render() {
     const favourites = document.createElement('div');
-    favourites.innerHTML = `
-      <h1>Список обраних книг:</h1>
-    `;
+
+    if (this.appState.favourites.length === 0) {
+      favourites.innerHTML = `
+        <h1>Список обраних книг:</h1>
+        <p>Вибачте, але ви ще не додали жодної книги до обранного.</p>
+        <p>Через 7 секунд, ви знову потрапите на головну сторінку, де зможете знайти потрібну книгу.</p>
+      `;
+
+      setTimeout(function () {
+        window.location.href = "/";
+      }, 7000);
+    } else {
+      favourites.innerHTML = `
+          <h1>Список обраних книг:</h1>
+      `;
+    }
+
     favourites.append(new CardList(this.appState, { list: this.appState.favourites }).render());
     this.app.innerHTML = '';
     this.app.append(favourites);

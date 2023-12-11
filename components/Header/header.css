@@ -35,3 +35,9 @@
   font-size: 12px;
   line-height: 28px;
 }
+
+@media (max-width: 390px) {
+  .nav {
+    gap: 10px;
+  }
+}

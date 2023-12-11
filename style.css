@@ -10,6 +10,12 @@
   min-width: 320px;
 }
 
+@media (max-width: 390px) {
+  #app {
+    padding-inline: 15px;
+  }
+}
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

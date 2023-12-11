@@ -13,6 +13,7 @@
 
 .search__input {
   flex-grow: 1;
+  width: 100%;
   padding: 15px 30px 15px 50px;
   background-color: var(--c-primary);
   border: none;
@@ -30,6 +31,7 @@
 }
 
 .search__btn {
+  flex-shrink: 0;
   padding-inline: 10px;
   display: flex;
   align-items: center;
@@ -38,4 +40,19 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.search__btn:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 390px) {
+  .search__input {
+    padding-inline: 15px;
+  }
+
+  .search__icon {
+    display: none;
+  }
 }

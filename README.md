@@ -16,4 +16,4 @@ You can search by book title or author and add your favourite book to your favou
 
 ### API
 
-https://openlibrary.org/
+https://openlibrary.org/dev/docs/api/search
